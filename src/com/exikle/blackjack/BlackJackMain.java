@@ -33,7 +33,7 @@ public class BlackJackMain extends JFrame implements ActionListener {
 	int[] check;
 
 	int card, suit, count = 0, turn = 0, playercounter = 0,
-			dealercounter = 0, ptot = 0, dtot = 0;
+	                dealercounter = 0, ptot = 0, dtot = 0;
 
 	String c, s, out = "Status";
 
@@ -54,11 +54,11 @@ public class BlackJackMain extends JFrame implements ActionListener {
 	MyDrawPanel p1;
 
 	Font f1 = new Font("Book Antiqua", Font.BOLD, 40), f2 = new Font(
-			"Comic Sans", Font.BOLD, 20);
+	    "Comic Sans", Font.BOLD, 20);
 
 	Color c1 = new Color(0, 133, 0), c2 = new Color(82, 0, 0),
-			c3 = new Color(152, 0, 0), c4 = new Color(62, 0, 0),
-			c5 = new Color(0, 92, 0);
+	c3 = new Color(152, 0, 0), c4 = new Color(62, 0, 0),
+	c5 = new Color(0, 92, 0);
 
 	public static void main(String[] args) {
 		new BlackJackMain();
@@ -68,12 +68,12 @@ public class BlackJackMain extends JFrame implements ActionListener {
 		super("BlackJack");
 		this.setResizable(false);
 		brdr1 = new CompoundBorder(LineBorder.createGrayLineBorder(),
-				BorderFactory.createLineBorder(Color.white));
+		                           BorderFactory.createLineBorder(Color.white));
 		brdr3 = new CompoundBorder(LineBorder.createGrayLineBorder(),
-				BorderFactory.createLineBorder(Color.black));
+		                           BorderFactory.createLineBorder(Color.black));
 
 		brdr2 = new CompoundBorder(brdr1,
-				BorderFactory.createLoweredBevelBorder());
+		                           BorderFactory.createLoweredBevelBorder());
 		p1 = new MyDrawPanel();
 		pnl1 = new JPanel();
 		pnl2 = new JPanel();
@@ -222,14 +222,14 @@ public class BlackJackMain extends JFrame implements ActionListener {
 			g7.setColor(Color.BLACK);
 			g7.drawRect(125, 25, 80, 125);
 			g7.drawImage(image, 150, 25, 230, 150, 2 * 144, 4 * 194,
-					(2 * 144) + 144, (4 * 194) + 194, this);
+			             (2 * 144) + 144, (4 * 194) + 194, this);
 			g7.drawRect(125, 200, 80, 125);
 			g7.drawImage(image, 125, 200, 205, 325, 2 * 144, 4 * 194,
-					(2 * 144) + 144, (4 * 194) + 194, this);
+			             (2 * 144) + 144, (4 * 194) + 194, this);
 
 			Graphics2D g9 = (Graphics2D) g;
 			g9.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
-					RenderingHints.VALUE_ANTIALIAS_ON);
+			                    RenderingHints.VALUE_ANTIALIAS_ON);
 			g9.setColor(Color.BLACK);
 			g9.fillArc(-50, 295, 500, 150, 0, -180);
 			g9.setColor(c2);
@@ -247,7 +247,7 @@ public class BlackJackMain extends JFrame implements ActionListener {
 			Graphics2D g4 = (Graphics2D) g;
 			// This line takes away the jaggedness and smooths out the lines
 			g4.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
-					RenderingHints.VALUE_ANTIALIAS_ON);
+			                    RenderingHints.VALUE_ANTIALIAS_ON);
 			// drawGrid Codes
 			//
 			// g4.setColor(Color.BLACK);
@@ -266,16 +266,16 @@ public class BlackJackMain extends JFrame implements ActionListener {
 			Graphics2D g2 = (Graphics2D) g;
 			for (int z = 0; z < dealercounter; z++) {
 				g2.drawImage(image, (150 + z * 25), 25 + 25 * z,
-						(230 + z * 25), 150 + 25 * z, deck[z][0],
-						deck[z][1], deck[z][0] + 144,
-						deck[z][1] + 194, this);
+				             (230 + z * 25), 150 + 25 * z, deck[z][0],
+				             deck[z][1], deck[z][0] + 144,
+				             deck[z][1] + 194, this);
 				// g2.drawImage(image, (125+(z+1)*25), 25, (205+(z+1)*25), 150, 2*144, 4*194, (2*144)+144, (4*194)+194, this);
 			}
 			for (int z = 0; z < playercounter; z++) {
 				g2.drawImage(image, (125 + z * 25), 200 + 25 * z,
-						(205 + z * 25), 325 + 25 * z, deck[z + 5][0],
-						deck[z + 5][1], deck[z + 5][0] + 144,
-						deck[z + 5][1] + 194, this);
+				             (205 + z * 25), 325 + 25 * z, deck[z + 5][0],
+				             deck[z + 5][1], deck[z + 5][0] + 144,
+				             deck[z + 5][1] + 194, this);
 				// g2.drawImage(image, (125+(z+1)*25), 200, (205+(z+1)*25), 325, 2*144, 4*194, (2*144)+144, (4*194)+194, this);
 			}
 

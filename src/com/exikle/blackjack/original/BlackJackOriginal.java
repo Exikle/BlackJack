@@ -21,7 +21,7 @@ import javax.swing.JPanel;
 
 @SuppressWarnings("serial")
 public class BlackJackOriginal extends JFrame implements
-		ActionListener {
+	ActionListener {
 
 	int[][] cardspicked;
 
@@ -30,7 +30,7 @@ public class BlackJackOriginal extends JFrame implements
 	int[] check;
 
 	int card, suit, count = 0, turn = 0, playerCount = 0,
-			dealCount = 0, playerTotal = 0, dealerTotal = 0;
+	                dealCount = 0, playerTotal = 0, dealerTotal = 0;
 
 	String c, s, out = "Status";
 
@@ -51,11 +51,11 @@ public class BlackJackOriginal extends JFrame implements
 	Image image;
 
 	Font f1 = new Font("Book Antiqua", Font.BOLD, 40), f2 = new Font(
-			"Comic Sans", Font.BOLD, 20);
+	    "Comic Sans", Font.BOLD, 20);
 
 	Color c1 = new Color(0, 133, 0), c2 = new Color(82, 0, 0),
-			c3 = new Color(152, 0, 0), c4 = new Color(62, 0, 0),
-			c5 = new Color(0, 92, 0);
+	c3 = new Color(152, 0, 0), c4 = new Color(62, 0, 0),
+	c5 = new Color(0, 92, 0);
 
 	public static void main(String[] args) {
 		new BlackJackOriginal();
@@ -197,17 +197,17 @@ public class BlackJackOriginal extends JFrame implements
 		public void paintComponent(Graphics g) {
 			Graphics2D g2 = (Graphics2D) g;
 			g2.drawImage(image, 150, 25, 230, 150, 2 * 144, 4 * 194,
-					(2 * 144) + 144, (4 * 194) + 194, this);
+			             (2 * 144) + 144, (4 * 194) + 194, this);
 			g2.drawImage(image, 125, 200, 205, 325, 2 * 144, 4 * 194,
-					(2 * 144) + 144, (4 * 194) + 194, this);
+			             (2 * 144) + 144, (4 * 194) + 194, this);
 			for (int z = 0; z < dealCount; z++)
 				g2.drawImage(image, (125 + (z + 1) * 25), 25,
-						(205 + (z + 1) * 25), 150, 2 * 144, 4 * 194,
-						(2 * 144) + 144, (4 * 194) + 194, this);
+				             (205 + (z + 1) * 25), 150, 2 * 144, 4 * 194,
+				             (2 * 144) + 144, (4 * 194) + 194, this);
 			for (int z = 0; z < playerCount; z++)
 				g2.drawImage(image, (125 + (z + 1) * 25), 200,
-						(205 + (z + 1) * 25), 325, 2 * 144, 4 * 194,
-						(2 * 144) + 144, (4 * 194) + 194, this);
+				             (205 + (z + 1) * 25), 325, 2 * 144, 4 * 194,
+				             (2 * 144) + 144, (4 * 194) + 194, this);
 
 			if ((turn == 1) || (turn == 2) || (turn == 3)) {
 				Graphics2D g3 = (Graphics2D) g;
